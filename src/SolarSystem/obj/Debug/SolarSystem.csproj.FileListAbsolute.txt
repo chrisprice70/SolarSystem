@@ -11,3 +11,16 @@ C:\Users\Chris\Downloads\SolarSystem\src\SolarSystem\obj\Debug\SolarSystem.Prope
 C:\Users\Chris\Downloads\SolarSystem\src\SolarSystem\obj\Debug\SolarSystem.csproj.GenerateResource.Cache
 C:\Users\Chris\Downloads\SolarSystem\src\SolarSystem\obj\Debug\SolarSystem.exe
 C:\Users\Chris\Downloads\SolarSystem\src\SolarSystem\obj\Debug\SolarSystem.pdb
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\bin\Debug\SolarSystem.exe
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\bin\Debug\SolarSystem.pdb
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\SolarSystem\obj\Debug\SolarSystem.csprojResolveAssemblyReference.cache
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\SolarSystem\obj\Debug\MainWindow.g.cs
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\SolarSystem\obj\Debug\App.g.cs
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\SolarSystem\obj\Debug\SolarSystem_MarkupCompile.cache
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\SolarSystem\obj\Debug\SolarSystem_MarkupCompile.lref
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\SolarSystem\obj\Debug\MainWindow.baml
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\SolarSystem\obj\Debug\SolarSystem.g.resources
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\SolarSystem\obj\Debug\SolarSystem.Properties.Resources.resources
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\SolarSystem\obj\Debug\SolarSystem.csproj.GenerateResource.Cache
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\SolarSystem\obj\Debug\SolarSystem.exe
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\SolarSystem\obj\Debug\SolarSystem.pdb
