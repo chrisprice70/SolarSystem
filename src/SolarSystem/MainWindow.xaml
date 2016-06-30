@@ -47,7 +47,7 @@
     		<ColumnDefinition/>
     		<ColumnDefinition Width="176"/>
     	</Grid.ColumnDefinitions>
-    	<Border Background="Black" CornerRadius="20" BorderThickness="10" BorderBrush="Gray" Grid.Column="0">
+    	<Border Background="Black" Grid.Column="0">
     		<Border.BitmapEffect>
     			<EmbossBitmapEffect LightAngle="45" Relief="12"/>
     		</Border.BitmapEffect>
