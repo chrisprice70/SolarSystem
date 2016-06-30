@@ -26,6 +26,7 @@ namespace SolarSystem
 
         const double EarthYear = 365.25;
         const double EarthRotationPeriod = 1.0;
+        const double MarsRotationPeriod = 1.0;
         const double SunRotationPeriod = 25.0;
         const double MartianYear = 686.98;
 
@@ -38,10 +39,11 @@ namespace SolarSystem
             set { _daysPerSecond = value; Update("DaysPerSecond"); }
         }
 
-        public double EarthOrbitRadius { get { return 40; } set { } }
+        public double EarthOrbitRadius { get { return 80; } set { } }
         public double MarsOrbitRadius { get { return EarthOrbitRadius * 2.4; } set { } }
         public double Days { get; set; }
         public double EarthRotationAngle { get; set; }
+        public double MarsRotationAngle { get; set; }
         public double SunRotationAngle { get; set; }
         public double EarthOrbitPositionX { get; set; }
         public double EarthOrbitPositionY { get; set; }
@@ -103,6 +105,7 @@ namespace SolarSystem
             EarthPosition();
             EarthRotation();
             MarsPosition();
+            MarsRotation();
             SunRotation();
         }
 
@@ -121,6 +124,12 @@ namespace SolarSystem
             EarthOrbitPositionY = EarthOrbitRadius * Math.Sin(angle);
             Update("EarthOrbitPositionX");
             Update("EarthOrbitPositionY");
+        }
+
+        private void MarsRotation()
+        {
+            MarsRotationAngle = 360 * Days / MarsRotationPeriod;
+            Update("MarsRotationAngle");
         }
 
         private void EarthRotation()

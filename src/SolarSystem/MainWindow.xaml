@@ -69,7 +69,7 @@
                     </Viewport3D.Resources>
                     
     			    <Viewport3D.Camera>
-    				    <PerspectiveCamera Position="-200 -200 200" LookDirection="1 1 -1"  UpDirection="0 0 1" FieldOfView="30"/>
+    				    <PerspectiveCamera Position="-400 -400 400" LookDirection="1 1 -1"  UpDirection="0 0 1" FieldOfView="30"/>
     			    </Viewport3D.Camera>
     			    <ModelVisual3D>
     				    <ModelVisual3D.Content>
@@ -79,7 +79,7 @@
     					    </Model3DGroup>
     				    </ModelVisual3D.Content>
     			    </ModelVisual3D>
-    			    <ikriv:Sphere Radius="8" x:Name="Sun">
+    			    <ikriv:Sphere Radius="15" x:Name="Sun">
     				    <ikriv:Sphere.Transform>
     					    <Transform3DGroup>
     						    <!-- Sun rotation axis orientation -->
@@ -151,16 +151,16 @@
                     <ikriv:Sphere Radius="4" x:Name="Mars">
                         <ikriv:Sphere.Transform>
                             <Transform3DGroup>
-                                <!-- Earth proper rotation -->
+                                <!-- Mars proper rotation -->
                                 <RotateTransform3D>
                                     <RotateTransform3D.Rotation>
                                         <AxisAngleRotation3D 
     									    Axis="0 1 0" 
-    									    Angle="{Binding EarthRotationAngle}"/>
+    									    Angle="{Binding MarsRotationAngle}"/>
                                     </RotateTransform3D.Rotation>
                                 </RotateTransform3D>
 
-                                <!-- Earth axis tilt -->
+                                <!-- Mars axis tilt -->
                                 <RotateTransform3D>
                                     <RotateTransform3D.Rotation>
                                         <AxisAngleRotation3D 
@@ -169,7 +169,7 @@
                                     </RotateTransform3D.Rotation>
                                 </RotateTransform3D>
 
-                                <!-- Earth orbit position -->
+                                <!-- Mars orbit position -->
                                 <TranslateTransform3D 
     							    OffsetX="{Binding MarsOrbitPositionX}" 
     							    OffsetY="{Binding MarsOrbitPositionY}" 
