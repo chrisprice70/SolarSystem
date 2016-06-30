@@ -30,7 +30,12 @@ namespace SolarSystem
         const double SunRotationPeriod = 25.0;
         const double MartianYear = 686.98;
         const double JupiterYear = 4380;
+        const double MercuryYear = 88;
+        const double VenusYear = 224;
+
         const double JupiterRotationPeriod = 0.5;
+        const double MercuryRotationPeriod = 58.5;
+        const double VenusRotationPeriod = 116.7;
 
         const double TwoPi = Math.PI * 2;
 
@@ -41,8 +46,10 @@ namespace SolarSystem
             set { _daysPerSecond = value; Update("DaysPerSecond"); }
         }
 
+        public double MercuryOrbitRadius { get { return EarthOrbitRadius * 0.4; } set { } }
+        public double VenusOrbitRadius { get { return EarthOrbitRadius * 0.7; } set { } }
         public double EarthOrbitRadius { get { return 80; } set { } }
-        public double MarsOrbitRadius { get { return EarthOrbitRadius * 2.4; } set { } }
+        public double MarsOrbitRadius { get { return EarthOrbitRadius * 1.5; } set { } }
         public double JupiterOrbitRadius { get { return EarthOrbitRadius * 5.2; } set { } }
         public double Days { get; set; }
         public double EarthRotationAngle { get; set; }
@@ -54,11 +61,24 @@ namespace SolarSystem
         public bool ReverseTime { get; set; }
         public bool Paused { get; set; }
         public double JupiterRotationAngle { get; set; }
+        public double MercuryRotationAngle { get; set; }
+        public double VenusRotationAngle { get; set; }
 
         //Mars
         public double MarsOrbitPositionX { get; set; }
         public double MarsOrbitPositionY { get; set; }
         public double MarsOrbitPositionZ { get; set; }
+
+        //Mercury
+        public double MercuryOrbitPositionX { get; set; }
+        public double MercuryOrbitPositionY { get; set; }
+        public double MercuryOrbitPositionZ { get; set; }
+
+        //Venus
+        public double VenusOrbitPositionX { get; set; }
+        public double VenusOrbitPositionY { get; set; }
+        public double VenusOrbitPositionZ { get; set; }
+
 
         public double JupiterOrbitPositionX { get; set; }
         public double JupiterOrbitPositionY { get; set; }
@@ -107,14 +127,52 @@ namespace SolarSystem
         }
 
         private void OnTimeChanged()
-        {
+        { 
+       
+            MercuryPosition();
+            MercuryRotation();
+
+            VenusPosition();
+            VenusPosition();
+
             EarthPosition();
             EarthRotation();
+
             MarsPosition();
             MarsRotation();
             SunRotation();
             JupiterPosition();
             JupiterRotation();
+        }
+
+        private void MercuryPosition()
+        {
+            double angle = 2 * Math.PI * Days / MercuryYear;
+            MercuryOrbitPositionX = MercuryOrbitRadius * Math.Cos(angle);
+            MercuryOrbitPositionY = MercuryOrbitRadius * Math.Sin(angle);
+            Update("MercuryOrbitPositionX");
+            Update("MercuryOrbitPositionY");
+        }
+
+        private void MercuryRotation()
+        {
+            MercuryRotationAngle = 360 * Days / MercuryRotationPeriod;
+            Update("MercuryRotationAngle");
+        }
+
+        private void VenusPosition()
+        {
+            double angle = 2 * Math.PI * Days / MartianYear;
+            VenusOrbitPositionX = VenusOrbitRadius * Math.Cos(angle);
+            VenusOrbitPositionY = VenusOrbitRadius * Math.Sin(angle);
+            Update("VenusOrbitPositionX");
+            Update("VenusOrbitPositionY");
+        }
+
+        private void VenusRotation()
+        {
+            VenusRotationAngle = 360 * Days / VenusRotationPeriod;
+            Update("VenusRotationAngle");
         }
 
         private void MarsPosition()
@@ -125,6 +183,13 @@ namespace SolarSystem
             Update("MarsOrbitPositionX");
             Update("MarsOrbitPositionY");
         }
+
+        private void MarsRotation()
+        {
+            MarsRotationAngle = 360 * Days / MarsRotationPeriod;
+            Update("MarsRotationAngle");
+        }
+
         private void JupiterPosition()
         {
             double angle = 2 * Math.PI * Days / JupiterYear;
@@ -133,6 +198,13 @@ namespace SolarSystem
             Update("JupiterOrbitPositionX");
             Update("JupiterOrbitPositionY");
         }
+
+        private void JupiterRotation()
+        {
+            JupiterRotationAngle = 360 * Days / JupiterRotationPeriod;
+            Update("JupiterRotationAngle");
+        }
+
         private void EarthPosition()
         {
             double angle = 2 * Math.PI * Days / EarthYear;
@@ -142,22 +214,12 @@ namespace SolarSystem
             Update("EarthOrbitPositionY");
         }
 
-        private void MarsRotation()
-        {
-            MarsRotationAngle = 360 * Days / MarsRotationPeriod;
-            Update("MarsRotationAngle");
-        }
-
         private void EarthRotation()
         {
             EarthRotationAngle = 360 * Days / EarthRotationPeriod;
             Update("EarthRotationAngle");
         }
-        private void JupiterRotation()
-        {
-            JupiterRotationAngle = 360 * Days / JupiterRotationPeriod;
-            Update("JupiterRotationAngle");
-        }
+        
 
         private void SunRotation()
         {

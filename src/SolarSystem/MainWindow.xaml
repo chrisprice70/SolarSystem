@@ -69,7 +69,7 @@
                     </Viewport3D.Resources>
                     
     			    <Viewport3D.Camera>
-    				    <PerspectiveCamera Position="-400 -400 400" LookDirection="1 1 -1"  UpDirection="0 0 1" FieldOfView="30"/>
+    				    <PerspectiveCamera Position="-600 -600 600" LookDirection="1 1 -1"  UpDirection="0 0 1" FieldOfView="30"/>
     			    </Viewport3D.Camera>
     			    <ModelVisual3D>
     				    <ModelVisual3D.Content>
