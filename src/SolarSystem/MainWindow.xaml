@@ -147,7 +147,7 @@
     					    </MaterialGroup>
     				    </ikriv:Sphere.Material>
     			    </ikriv:Sphere>
-
+                   
                     <ikriv:Sphere Radius="4" x:Name="Mars">
                         <ikriv:Sphere.Transform>
                             <Transform3DGroup>
@@ -187,7 +187,49 @@
                             </MaterialGroup>
                         </ikriv:Sphere.Material>
                     </ikriv:Sphere>
+                     
+                    <!-- Jupiter -->
+                    <ikriv:Sphere Radius="12" x:Name="Jupiter">
+                        <ikriv:Sphere.Transform>
+                            <Transform3DGroup>
+                                <!-- Jupiter proper rotation -->
+                                <RotateTransform3D>
+                                    <RotateTransform3D.Rotation>
+                                        <AxisAngleRotation3D 
+    									    Axis="0 1 0" 
+    									    Angle="{Binding JupiterRotationAngle}"/>
+                                    </RotateTransform3D.Rotation>
+                                </RotateTransform3D>
 
+                                <!-- Jupiter axis tilt -->
+                                <RotateTransform3D>
+                                    <RotateTransform3D.Rotation>
+                                        <AxisAngleRotation3D 
+    									    Axis="1 0 0" 
+    									    Angle="67.5"/>
+                                    </RotateTransform3D.Rotation>
+                                </RotateTransform3D>
+
+                                <!-- Jupiter orbit position -->
+                                <TranslateTransform3D 
+    							    OffsetX="{Binding JupiterOrbitPositionX}" 
+    							    OffsetY="{Binding JupiterOrbitPositionY}" 
+    							    OffsetZ="{Binding JupiterOrbitPositionZ}" />
+                            </Transform3DGroup>
+                        </ikriv:Sphere.Transform>
+
+                        <ikriv:Sphere.Material>
+                            <MaterialGroup>
+                                <DiffuseMaterial>
+                                    <DiffuseMaterial.Brush>
+                                        <ImageBrush ImageSource="/Images/Jupiterbitmap.jpg" />
+                                    </DiffuseMaterial.Brush>
+                                </DiffuseMaterial>
+                            </MaterialGroup>
+                        </ikriv:Sphere.Material>
+                    </ikriv:Sphere>
+
+                 
                     <ikriv:Circle x:Name="OrbitPlane" 
                                   Radius="{Binding EarthOrbitRadius}" 
                                   Visible="{Binding ElementName=SeeOrbitPlane, Path=IsChecked, FallbackValue=false}"
