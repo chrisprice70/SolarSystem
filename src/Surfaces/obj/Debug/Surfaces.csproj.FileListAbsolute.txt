@@ -1,0 +1,8 @@
+C:\Users\Chris\Downloads\SolarSystem\bin\Debug\Surfaces.dll
+C:\Users\Chris\Downloads\SolarSystem\bin\Debug\Surfaces.pdb
+C:\Users\Chris\Downloads\SolarSystem\src\Surfaces\obj\Debug\Surfaces.csprojResolveAssemblyReference.cache
+C:\Users\Chris\Downloads\SolarSystem\src\Surfaces\obj\Debug\Surfaces.g.resources
+C:\Users\Chris\Downloads\SolarSystem\src\Surfaces\obj\Debug\Surfaces.Properties.Resources.resources
+C:\Users\Chris\Downloads\SolarSystem\src\Surfaces\obj\Debug\Surfaces.csproj.GenerateResource.Cache
+C:\Users\Chris\Downloads\SolarSystem\src\Surfaces\obj\Debug\Surfaces.dll
+C:\Users\Chris\Downloads\SolarSystem\src\Surfaces\obj\Debug\Surfaces.pdb
