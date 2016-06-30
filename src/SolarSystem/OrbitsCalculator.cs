@@ -28,6 +28,8 @@ namespace SolarSystem
         const double EarthRotationPeriod = 1.0;
         const double SunRotationPeriod = 25.0;
         const double MartianYear = 686.98;
+        const double JupiterYear = 4380;
+        const double JupiterRotationPeriod = 0.5;
 
         const double TwoPi = Math.PI * 2;
 
@@ -40,6 +42,7 @@ namespace SolarSystem
 
         public double EarthOrbitRadius { get { return 40; } set { } }
         public double MarsOrbitRadius { get { return EarthOrbitRadius * 2.4; } set { } }
+        public double JupiterOrbitRadius { get { return EarthOrbitRadius * 5.2; } set { } }
         public double Days { get; set; }
         public double EarthRotationAngle { get; set; }
         public double SunRotationAngle { get; set; }
@@ -48,13 +51,16 @@ namespace SolarSystem
         public double EarthOrbitPositionZ { get; set; }
         public bool ReverseTime { get; set; }
         public bool Paused { get; set; }
+        public double JupiterRotationAngle { get; set; }
 
         //Mars
         public double MarsOrbitPositionX { get; set; }
         public double MarsOrbitPositionY { get; set; }
         public double MarsOrbitPositionZ { get; set; }
 
-
+        public double JupiterOrbitPositionX { get; set; }
+        public double JupiterOrbitPositionY { get; set; }
+        public double JupiterOrbitPositionZ { get; set; }
         public OrbitsCalculator()
         {
             EarthOrbitPositionX = EarthOrbitRadius;
@@ -104,6 +110,8 @@ namespace SolarSystem
             EarthRotation();
             MarsPosition();
             SunRotation();
+            JupiterPosition();
+            JupiterRotation();
         }
 
         private void MarsPosition()
@@ -113,6 +121,14 @@ namespace SolarSystem
             MarsOrbitPositionY = MarsOrbitRadius * Math.Sin(angle);
             Update("MarsOrbitPositionX");
             Update("MarsOrbitPositionY");
+        }
+        private void JupiterPosition()
+        {
+            double angle = 2 * Math.PI * Days / JupiterYear;
+            JupiterOrbitPositionX = JupiterOrbitRadius * Math.Cos(angle);
+            JupiterOrbitPositionY = JupiterOrbitRadius * Math.Sin(angle);
+            Update("JupiterOrbitPositionX");
+            Update("JupiterOrbitPositionY");
         }
         private void EarthPosition()
         {
@@ -127,6 +143,11 @@ namespace SolarSystem
         {
             EarthRotationAngle = 360 * Days / EarthRotationPeriod;
             Update("EarthRotationAngle");
+        }
+        private void JupiterRotation()
+        {
+            JupiterRotationAngle = 360 * Days / JupiterRotationPeriod;
+            Update("JupiterRotationAngle");
         }
 
         private void SunRotation()

@@ -6,3 +6,10 @@ C:\Users\Chris\Downloads\SolarSystem\src\Surfaces\obj\Debug\Surfaces.Properties.
 C:\Users\Chris\Downloads\SolarSystem\src\Surfaces\obj\Debug\Surfaces.csproj.GenerateResource.Cache
 C:\Users\Chris\Downloads\SolarSystem\src\Surfaces\obj\Debug\Surfaces.dll
 C:\Users\Chris\Downloads\SolarSystem\src\Surfaces\obj\Debug\Surfaces.pdb
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\bin\Debug\Surfaces.dll
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\bin\Debug\Surfaces.pdb
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\Surfaces\obj\Debug\Surfaces.g.resources
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\Surfaces\obj\Debug\Surfaces.Properties.Resources.resources
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\Surfaces\obj\Debug\Surfaces.csproj.GenerateResource.Cache
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\Surfaces\obj\Debug\Surfaces.dll
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\Surfaces\obj\Debug\Surfaces.pdb
