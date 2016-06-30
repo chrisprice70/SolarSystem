@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/jupiter__bitmap.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/mercurybitmap.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/venusbitmap.jpg")]
 
 

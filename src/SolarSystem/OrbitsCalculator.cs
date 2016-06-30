@@ -162,7 +162,7 @@ namespace SolarSystem
 
         private void VenusPosition()
         {
-            double angle = 2 * Math.PI * Days / MartianYear;
+            double angle = 2 * Math.PI * Days / VenusYear;
             VenusOrbitPositionX = VenusOrbitRadius * Math.Cos(angle);
             VenusOrbitPositionY = VenusOrbitRadius * Math.Sin(angle);
             Update("VenusOrbitPositionX");

@@ -12,3 +12,4 @@ C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\Surf
 C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\Surfaces\obj\Debug\Surfaces.csproj.GenerateResource.Cache
 C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\Surfaces\obj\Debug\Surfaces.dll
 C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\Surfaces\obj\Debug\Surfaces.pdb
+C:\Users\ian\OneDrive\Documents\Visual Studio 2015\Projects\SolarSystem\src\Surfaces\obj\Debug\Surfaces.csprojResolveAssemblyReference.cache
