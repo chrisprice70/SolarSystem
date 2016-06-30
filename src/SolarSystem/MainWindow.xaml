@@ -188,6 +188,87 @@
                         </ikriv:Sphere.Material>
                     </ikriv:Sphere>
                      
+                    <!-- Mercury -->
+                    <ikriv:Sphere Radius="5" x:Name="Mercury">
+                        <ikriv:Sphere.Transform>
+                            <Transform3DGroup>
+                                <!-- Mercury proper rotation -->
+                                <RotateTransform3D>
+                                    <RotateTransform3D.Rotation>
+                                        <AxisAngleRotation3D 
+    									    Axis="0 1 0" 
+    									    Angle="{Binding MercuryRotationAngle}"/>
+                                    </RotateTransform3D.Rotation>
+                                </RotateTransform3D>
+
+                                <!-- Mercury axis tilt -->
+                                <RotateTransform3D>
+                                    <RotateTransform3D.Rotation>
+                                        <AxisAngleRotation3D 
+    									    Axis="1 0 0" 
+    									    Angle="67.5"/>
+                                    </RotateTransform3D.Rotation>
+                                </RotateTransform3D>
+
+                                <!-- Mercury orbit position -->
+                                <TranslateTransform3D 
+    							    OffsetX="{Binding MercuryOrbitPositionX}" 
+    							    OffsetY="{Binding MercuryOrbitPositionY}" 
+    							    OffsetZ="{Binding MercuryOrbitPositionZ}" />
+                            </Transform3DGroup>
+                        </ikriv:Sphere.Transform>
+
+                        <ikriv:Sphere.Material>
+                            <MaterialGroup>
+                                <DiffuseMaterial>
+                                    <DiffuseMaterial.Brush>
+                                        <ImageBrush ImageSource="/Images/MercuryBitmap.jpg" />
+                                    </DiffuseMaterial.Brush>
+                                </DiffuseMaterial>
+                            </MaterialGroup>
+                        </ikriv:Sphere.Material>
+                    </ikriv:Sphere>
+                    <!-- Venus -->
+                    <ikriv:Sphere Radius="5" x:Name="Venus">
+                        <ikriv:Sphere.Transform>
+                            <Transform3DGroup>
+                                <!-- Venus proper rotation -->
+                                <RotateTransform3D>
+                                    <RotateTransform3D.Rotation>
+                                        <AxisAngleRotation3D 
+    									    Axis="0 1 0" 
+    									    Angle="{Binding VenusRotationAngle}"/>
+                                    </RotateTransform3D.Rotation>
+                                </RotateTransform3D>
+
+                                <!-- Venus axis tilt -->
+                                <RotateTransform3D>
+                                    <RotateTransform3D.Rotation>
+                                        <AxisAngleRotation3D 
+    									    Axis="1 0 0" 
+    									    Angle="67.5"/>
+                                    </RotateTransform3D.Rotation>
+                                </RotateTransform3D>
+
+                                <!-- Venus orbit position -->
+                                <TranslateTransform3D 
+    							    OffsetX="{Binding VenusOrbitPositionX}" 
+    							    OffsetY="{Binding VenusOrbitPositionY}" 
+    							    OffsetZ="{Binding VenusOrbitPositionZ}" />
+                            </Transform3DGroup>
+                        </ikriv:Sphere.Transform>
+
+                        <ikriv:Sphere.Material>
+                            <MaterialGroup>
+                                <DiffuseMaterial>
+                                    <DiffuseMaterial.Brush>
+                                        <ImageBrush ImageSource="/Images/VenusBitmap.jpg" />
+                                    </DiffuseMaterial.Brush>
+                                </DiffuseMaterial>
+                            </MaterialGroup>
+                        </ikriv:Sphere.Material>
+                    </ikriv:Sphere>
+
                     <!-- Jupiter -->
                     <ikriv:Sphere Radius="12" x:Name="Jupiter">
                         <ikriv:Sphere.Transform>
@@ -229,7 +310,6 @@
                         </ikriv:Sphere.Material>
                     </ikriv:Sphere>
 
-                 
                     <ikriv:Circle x:Name="OrbitPlane" 
                                   Radius="{Binding EarthOrbitRadius}" 
                                   Visible="{Binding ElementName=SeeOrbitPlane, Path=IsChecked, FallbackValue=false}"
